@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mooli', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+/*---------------------------------VARIABLES----------------------*/
+$orange: #FFA500;
+$white: #FFFFFF;
+$titulos:30px;
+$subtitulos:24px;
+$otros-titulos:18px;
+
+/*---------------------------------BODY--------------------------*/
+body{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 75px auto 60px;
+    grid-template-areas: 
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer"
+    ;
+    background-image: url(../multimedia/cuyotransparente.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 350px;
+    .productos{
+        background-image: none;
+    }
+}
+/*---------------------------------HEADER--------------------------*/
+header{
+    grid-area: header;
+    background-color: $orange;
+    width: 100%;
+    height: 65px;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+        text-decoration: none;
+        font-style: italic;
+        font-size:$titulos;
+        padding: 0px 12px;
+    }
+    h4{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14px;
+        text-align:center;
+    }
+    .conteiner-img{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .conteiner-tittle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    ul{
+        list-style-type: none;
+        a{
+            text-decoration: none;   
+            font-size: 16px;
+            color:black;
+            display: flex;
+        }
+    }
+    img{
+        display: inline-block;
+        width: 60px;
+    }
+   
+    .conteiner-nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .menu-item{
+        display: flex;
+        padding: 10px;
+    }
+}
+
+/*---------------------------------MAIN--------------------------*/
+main{
+    display: grid;
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 25px;
+    .rainbow-background {
+        background: linear-gradient(to right, red, orange, salmon, yellow, $white);
+        background-size: 1000% auto;
+        animation: rainbowAnimation 5s infinite;
+      }
+      
+      @keyframes rainbowAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+    #diagramaDeFlujo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 0px;
+        justify-content: center;
+        h2{
+            font-size: $subtitulos;
+            font-style: italic;
+        }
+        img{
+            display: flex;
+            padding: 12px;
+            width: 300px;
+        }
+    }
+    #hielo{
+        display: flex;
+        flex-direction: column;
+        padding: 12px 0px;
+        align-items: center;
+        justify-content: center;
+        h2{
+            font-size: $subtitulos;
+            font-style: italic;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 600;
+            font-style: normal;
+        }
+        img{
+            padding: 12px 0px;
+        }
+    }
+    .img-productos img{
+        width: 90px;
+    }
+    img{
+        width: 90px;
+        
+    }
+}
+
+/*---------------------------------FOTER--------------------------*/
+
+footer{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items:center;
+    align-content: center;
+    align-items: center;
+    .links{
+        display: flex;
+        flex-direction: row;
+    }
+    img{
+        width: 40px;
+    }
+    h2{
+        font-size: 12px
+    }
+
+}
